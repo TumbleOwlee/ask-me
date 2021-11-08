@@ -1,0 +1,52 @@
+import:
+  url: "https://finalexam.eu/zvb-service/methods/kerdesControl/getQuestionByLimit"
+  headers:
+    accept: "application/json"
+    content-type: "application/json"
+    cookie: "JSESSIONID=9Bw0eyQvC1bM-hhMMk1GupzzRoDCSTnvH1aRLfL2.www; zvLangId=3; zvSchoolId=1"
+    origin: "https://finalexam.eu"
+    referer: "https://finalexam.eu"
+  max_questions_per_section: 5000
+general:
+  id_mapping:
+    118: "Innere Medizin"
+    119: "Chirurgie"
+    120: "Paediatrie"
+    121: "Psychiatrie"
+    122: "Neurologie"
+    123: "Gynaekologie und Geburtshilfe"
+    124: "Dermatologie"
+    125: "Urologie"
+    126: "Hals-Nasen-Ohrenheilkunde"
+    127: "Orthopaedie"
+    128: "Ophthalmologie"
+    141: "Zahnmedizin"
+    145: "Reumatologie"
+    148: "Praeventivmedizin"
+processing:
+  field-mapping:
+    choice-task:
+      question-number: "csorszam"
+      question-text: "leirasPlaintext"
+      description-tag: "esetleiras"
+      description-field: "nevPlaintext"
+      info-list: 
+        elements: "kerdesElemiValasz"
+        element-number: "szam"
+        element-text: "szoveg"
+      option-list:
+        options: "kerdesValasz"
+        option-number: "betujel"
+        option-text: "szoveg"
+        option-correct: "helyes"
+    mapping-task:
+      tag: "asszociaciosLeiras"
+      question-number: "csorszam"
+      question-name: "leirasPlaintext"
+      association: "leirasTetelAsszociacios"
+      association-opt: "asszociaciosLeirasTetel"
+      association-num: "betujel"
+      association-text: "szovegPlaintext"
+      id: "id"
+      id_target: "kerdesId"
+
